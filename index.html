@@ -602,18 +602,43 @@
 			}
 		}
 
-		/* Mobile pagination layout */
+		/* Mobile pagination and arrow layout */
 		@media (max-width: 768px) {
 			.stockholm-pagination {
-				bottom: 40px !important;
-				right: 30px !important;
-				gap: 18px !important;
-				top: auto !important;
-				left: auto !important;
+				display: none !important;
+			}
+
+			.slider-arrow {
 				display: flex !important;
-				flex-direction: row !important;
+				align-items: center !important;
+				justify-content: center !important;
 				position: absolute !important;
-				z-index: 999 !important;
+				top: 50% !important;
+				transform: translateY(-50%) !important;
+				width: 44px !important;
+				height: 44px !important;
+				background: rgba(0, 0, 0, 0.45) !important;
+				color: #ffffff !important;
+				border-radius: 50% !important;
+				z-index: 1000 !important;
+				cursor: pointer !important;
+				user-select: none !important;
+				backdrop-filter: blur(4px) !important;
+				transition: background 0.3s ease, transform 0.2s ease !important;
+				border: 1px solid rgba(255, 255, 255, 0.25) !important;
+			}
+
+			.slider-arrow:active {
+				background: rgba(0, 0, 0, 0.8) !important;
+				transform: translateY(-50%) scale(0.92) !important;
+			}
+
+			.slider-arrow-prev {
+				left: 15px !important;
+			}
+
+			.slider-arrow-next {
+				right: 15px !important;
 			}
 		}
 	</style>
@@ -3941,6 +3966,68 @@
 					});
 				}
 
+				function enforceArrows() {
+					let prevBtn = mod.querySelector('.slider-arrow-prev');
+					let nextBtn = mod.querySelector('.slider-arrow-next');
+
+					if (!prevBtn) {
+						prevBtn = document.createElement('div');
+						prevBtn.className = 'slider-arrow slider-arrow-prev';
+						prevBtn.setAttribute('aria-label', 'Previous Slide');
+						prevBtn.innerHTML = '<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+						mod.appendChild(prevBtn);
+					}
+
+					if (!nextBtn) {
+						nextBtn = document.createElement('div');
+						nextBtn.className = 'slider-arrow slider-arrow-next';
+						nextBtn.setAttribute('aria-label', 'Next Slide');
+						nextBtn.innerHTML = '<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+						mod.appendChild(nextBtn);
+					}
+
+					prevBtn.onclick = function (e) {
+						e.preventDefault();
+						e.stopPropagation();
+						const prevIdx = (currentIndex - 1 + slides.length) % slides.length;
+						goToSlide(prevIdx);
+						resetTimer();
+					};
+
+					nextBtn.onclick = function (e) {
+						e.preventDefault();
+						e.stopPropagation();
+						const nextIdx = (currentIndex + 1) % slides.length;
+						goToSlide(nextIdx);
+						resetTimer();
+					};
+				}
+
+				let touchStartX = 0;
+				let touchEndX = 0;
+
+				mod.addEventListener('touchstart', function (e) {
+					if (e.changedTouches && e.changedTouches.length > 0) {
+						touchStartX = e.changedTouches[0].screenX;
+					}
+				}, { passive: true });
+
+				mod.addEventListener('touchend', function (e) {
+					if (e.changedTouches && e.changedTouches.length > 0) {
+						touchEndX = e.changedTouches[0].screenX;
+						const swipeThreshold = 40;
+						if (touchEndX < touchStartX - swipeThreshold) {
+							const nextIdx = (currentIndex + 1) % slides.length;
+							goToSlide(nextIdx);
+							resetTimer();
+						} else if (touchEndX > touchStartX + swipeThreshold) {
+							const prevIdx = (currentIndex - 1 + slides.length) % slides.length;
+							goToSlide(prevIdx);
+							resetTimer();
+						}
+					}
+				}, { passive: true });
+
 				function goToSlide(targetIndex) {
 					if (targetIndex === currentIndex) return;
 					const prevIndex = currentIndex;
@@ -3979,10 +4066,12 @@
 				}
 
 				enforceBullets();
+				enforceArrows();
 				resetTimer();
 
 				const obs = new MutationObserver(function () {
 					enforceBullets();
+					enforceArrows();
 				});
 				obs.observe(mod, { childList: true, subtree: true });
 			}
