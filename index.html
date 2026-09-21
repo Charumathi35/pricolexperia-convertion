@@ -509,6 +509,70 @@
 			border-color: rgba(255, 255, 255, 0.8) !important;
 		}
 
+		/* Bottom-left slide overlay caption & logo styling */
+		.slide-bottom-left-caption {
+			position: absolute !important;
+			bottom: 124px !important;
+			left: 128px !important;
+			z-index: 20 !important;
+			pointer-events: none !important;
+			color: #ffffff !important;
+			font-family: 'Yantramanav', 'Montserrat', sans-serif !important;
+			text-align: left !important;
+			display: block !important;
+			visibility: visible !important;
+		}
+
+		.slide-bottom-left-caption .caption-title {
+			font-size: 28px !important;
+			font-weight: 700 !important;
+			letter-spacing: 2px !important;
+			text-transform: uppercase !important;
+			font-style: italic !important;
+			line-height: 1.2 !important;
+			color: #ffffff !important;
+			text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6) !important;
+		}
+
+		.slide-bottom-left-caption .caption-line {
+			width: 120px !important;
+			height: 3px !important;
+			background-color: #e30613 !important;
+			margin-top: 8px !important;
+		}
+
+		.slide-bottom-left-caption .caption-subtitle {
+			font-size: 15px !important;
+			font-weight: 400 !important;
+			letter-spacing: 1px !important;
+			font-style: italic !important;
+			margin-top: 4px !important;
+			color: #ffffff !important;
+			opacity: 0.95 !important;
+			text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6) !important;
+		}
+
+		.slide-bottom-left-caption .caption-logo-img {
+			height: 100px !important;
+			max-width: 300px !important;
+			width: auto !important;
+			object-fit: contain !important;
+			display: block !important;
+			filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6)) !important;
+		}
+
+		@media (max-width: 768px) {
+			.slide-bottom-left-caption {
+				bottom: 50px !important;
+				left: 30px !important;
+			}
+
+			.slide-bottom-left-caption .caption-logo-img {
+				height: 60px !important;
+				max-width: 180px !important;
+			}
+		}
+
 		/* Desktop pagination layout */
 		@media (min-width: 769px) {
 			.stockholm-pagination {
@@ -812,6 +876,9 @@
 																		<img src="images/Pricol-Experia-Sliders-04-2-scaled1.jpg"
 																			style="width:100%;height:100%;object-fit:cover;display:block!important;visibility:visible!important;opacity:1!important;">
 																	</sr7-bg>
+																	<div class="slide-bottom-left-caption">
+																		<img src="images/Pricol-Logo-09.png" alt="Pricol Travel" class="caption-logo-img">
+																	</div>
 																</sr7-slide>
 																<sr7-slide id="SR7_3_1-18" data-key="18"
 																	style="position:absolute;top:0;left:0;width:100%;height:100%;">
@@ -820,6 +887,9 @@
 																		<img src="images/Pricol-Experia-Sliders-09-scaled1.jpg"
 																			style="width:100%;height:100%;object-fit:cover;display:block!important;visibility:visible!important;opacity:1!important;">
 																	</sr7-bg>
+																	<div class="slide-bottom-left-caption">
+																		<img src="images/Pricol-Logo-10.png" alt="Pricol Gourmet" class="caption-logo-img">
+																	</div>
 																</sr7-slide>
 																<sr7-slide id="SR7_3_1-19" data-key="19"
 																	style="position:absolute;top:0;left:0;width:100%;height:100%;">
@@ -828,6 +898,9 @@
 																		<img src="images/Pricol-Experia-Sliders-03-scaled1.jpg"
 																			style="width:100%;height:100%;object-fit:cover;display:block!important;visibility:visible!important;opacity:1!important;">
 																	</sr7-bg>
+																	<div class="slide-bottom-left-caption">
+																		<img src="images/Pricol-Logo-11.png" alt="Pricol Holidays" class="caption-logo-img">
+																	</div>
 																</sr7-slide>
 																<sr7-slide id="SR7_3_1-20" data-key="20"
 																	style="position:absolute;top:0;left:0;width:100%;height:100%;">
@@ -836,6 +909,9 @@
 																		<img src="images/Pricol-Experia-Sliders-07-1-scaled1.jpg"
 																			style="width:100%;height:100%;object-fit:cover;display:block!important;visibility:visible!important;opacity:1!important;">
 																	</sr7-bg>
+																	<div class="slide-bottom-left-caption">
+																		<img src="images/Dvara_Logo-05.png" alt="DVĀRA" class="caption-logo-img">
+																	</div>
 																</sr7-slide>
 																<sr7-slide id="SR7_3_1-21" data-key="21"
 																	style="position:absolute;top:0;left:0;width:100%;height:100%;">
@@ -844,6 +920,9 @@
 																		<img src="images/Pricol-Experia-Sliders-061-scaled.jpg"
 																			style="width:100%;height:100%;object-fit:cover;display:block!important;visibility:visible!important;opacity:1!important;">
 																	</sr7-bg>
+																	<div class="slide-bottom-left-caption">
+																		<img src="images/Artboard-50-8.png" alt="BLU ORB" class="caption-logo-img">
+																	</div>
 																</sr7-slide>
 
 																<sr7-module-shadow
@@ -949,6 +1028,9 @@
 																		<img src="images/Experia-04-1-scaled.jpg"
 																			style="width:100%;height:100%;object-fit:cover;display:block!important;visibility:visible!important;opacity:1!important;">
 																	</sr7-bg>
+																	<div class="slide-bottom-left-caption">
+																		<img src="images/Pricol-Logo-09.png" alt="Pricol Travel" class="caption-logo-img">
+																	</div>
 																</sr7-slide>
 																<sr7-slide id="SR7_2_2-12" data-key="12"
 																	style="position:absolute;top:0;left:0;width:100%;height:100%;">
@@ -957,6 +1039,9 @@
 																		<img src="images/Experia-05-1-scaled.jpg"
 																			style="width:100%;height:100%;object-fit:cover;display:block!important;visibility:visible!important;opacity:1!important;">
 																	</sr7-bg>
+																	<div class="slide-bottom-left-caption">
+																		<img src="images/Pricol-Logo-10.png" alt="Pricol Gourmet" class="caption-logo-img">
+																	</div>
 																</sr7-slide>
 																<sr7-slide id="SR7_2_2-13" data-key="13"
 																	style="position:absolute;top:0;left:0;width:100%;height:100%;">
@@ -965,6 +1050,9 @@
 																		<img src="images/Experia-03-1-scaled.jpg"
 																			style="width:100%;height:100%;object-fit:cover;display:block!important;visibility:visible!important;opacity:1!important;">
 																	</sr7-bg>
+																	<div class="slide-bottom-left-caption">
+																		<img src="images/Pricol-Logo-11.png" alt="Pricol Holidays" class="caption-logo-img">
+																	</div>
 																</sr7-slide>
 																<sr7-slide id="SR7_2_2-14" data-key="14"
 																	style="position:absolute;top:0;left:0;width:100%;height:100%;">
@@ -973,6 +1061,9 @@
 																		<img src="images/Experia-06-1-scaled.jpg"
 																			style="width:100%;height:100%;object-fit:cover;display:block!important;visibility:visible!important;opacity:1!important;">
 																	</sr7-bg>
+																	<div class="slide-bottom-left-caption">
+																		<img src="images/Dvara_Logo-05.png" alt="DVĀRA" class="caption-logo-img">
+																	</div>
 																</sr7-slide>
 																<sr7-slide id="SR7_2_2-15" data-key="15"
 																	style="position:absolute;top:0;left:0;width:100%;height:100%;">
@@ -981,6 +1072,9 @@
 																		<img src="images/Pricol-Experia-Sliders-061-scaled.jpg"
 																			style="width:100%;height:100%;object-fit:cover;display:block!important;visibility:visible!important;opacity:1!important;">
 																	</sr7-bg>
+																	<div class="slide-bottom-left-caption">
+																		<img src="images/Artboard-50-8.png" alt="BLU ORB" class="caption-logo-img">
+																	</div>
 																</sr7-slide>
 
 																<sr7-module-shadow
@@ -3724,162 +3818,162 @@
 		</div>
 	</div>
 	<script id="custom-local-slider-controller">
-			(function () {
-				document.addEventListener("DOMContentLoaded", function () {
-					initLocalSliders();
+		(function () {
+			document.addEventListener("DOMContentLoaded", function () {
+				initLocalSliders();
+			});
+			if (document.readyState === "interactive" || document.readyState === "complete") {
+				initLocalSliders();
+			}
+
+			function initLocalSliders() {
+				const modules = document.querySelectorAll('sr7-module');
+				modules.forEach(function (mod) {
+					if (mod.dataset.customSliderInited) return;
+					mod.dataset.customSliderInited = 'true';
+					setupModuleSlider(mod);
 				});
-				if (document.readyState === "interactive" || document.readyState === "complete") {
-					initLocalSliders();
+			}
+
+			function setupModuleSlider(mod) {
+				// Collect non-empty slides
+				const rawSlides = Array.from(mod.querySelectorAll('sr7-slide'));
+				const slides = rawSlides.filter(s => {
+					const bg = s.querySelector('sr7-layer[data-subtype="slidebg"]');
+					const img = s.querySelector('img');
+					const layers = s.querySelectorAll('.sr7-layer');
+					return bg !== null || img !== null || layers.length > 0;
+				});
+
+				if (slides.length === 0) return;
+
+				let currentIndex = 0;
+				let timer = null;
+
+				// Remove any extra 7th slide element from DOM
+				rawSlides.forEach(s => {
+					if (!slides.includes(s)) {
+						s.style.display = 'none';
+					}
+				});
+
+				// Setup initial slide z-indices and opacity
+				slides.forEach((slide, idx) => {
+					slide.style.position = 'absolute';
+					slide.style.top = '0';
+					slide.style.left = '0';
+					slide.style.width = '100%';
+					slide.style.height = '100%';
+					slide.style.transition = 'opacity 0.8s ease-in-out';
+					if (idx === 0) {
+						slide.style.opacity = '1';
+						slide.style.zIndex = '10';
+						slide.style.visibility = 'visible';
+					} else {
+						slide.style.opacity = '0';
+						slide.style.zIndex = '1';
+						slide.style.visibility = 'hidden';
+					}
+				});
+
+				function enforceBullets() {
+					const containers = Array.from(mod.querySelectorAll('.stockholm-pagination, sr7-bullets'));
+					if (containers.length > 1) {
+						for (let k = 1; k < containers.length; k++) {
+							containers[k].remove();
+						}
+					}
+
+					let bContainer = containers[0];
+					if (!bContainer) {
+						bContainer = document.createElement('div');
+						bContainer.className = 'stockholm-pagination';
+						mod.appendChild(bContainer);
+					} else {
+						bContainer.classList.add('stockholm-pagination');
+					}
+
+					let bullets = Array.from(bContainer.querySelectorAll('.sr7-bullet, sr7-bullet'));
+					if (bullets.length !== slides.length) {
+						bContainer.innerHTML = '';
+						bullets = [];
+						for (let i = 0; i < slides.length; i++) {
+							const b = document.createElement('div');
+							b.className = 'sr7-bullet';
+							b.setAttribute('data-index', i);
+							bContainer.appendChild(b);
+							bullets.push(b);
+						}
+					}
+
+					// Guarantee bContainer has strictly slides.length children
+					while (bContainer.children.length > slides.length) {
+						bContainer.lastElementChild.remove();
+					}
+
+					bullets.forEach((b, i) => {
+						if (i === currentIndex) {
+							b.classList.add('custom-bullet-active');
+							b.classList.add('selected');
+						} else {
+							b.classList.remove('custom-bullet-active');
+							b.classList.remove('selected');
+						}
+						b.onclick = function (e) {
+							e.preventDefault();
+							e.stopPropagation();
+							goToSlide(i);
+							resetTimer();
+						};
+					});
 				}
 
-				function initLocalSliders() {
-					const modules = document.querySelectorAll('sr7-module');
-					modules.forEach(function (mod) {
-						if (mod.dataset.customSliderInited) return;
-						mod.dataset.customSliderInited = 'true';
-						setupModuleSlider(mod);
-					});
-				}
+				function goToSlide(targetIndex) {
+					if (targetIndex === currentIndex) return;
+					const prevIndex = currentIndex;
+					currentIndex = targetIndex;
 
-				function setupModuleSlider(mod) {
-					// Collect non-empty slides
-					const rawSlides = Array.from(mod.querySelectorAll('sr7-slide'));
-					const slides = rawSlides.filter(s => {
-						const bg = s.querySelector('sr7-layer[data-subtype="slidebg"]');
-						const img = s.querySelector('img');
-						const layers = s.querySelectorAll('.sr7-layer');
-						return bg !== null || img !== null || layers.length > 0;
-					});
+					const prevSlide = slides[prevIndex];
+					const nextSlide = slides[currentIndex];
 
-					if (slides.length === 0) return;
-
-					let currentIndex = 0;
-					let timer = null;
-
-					// Remove any extra 7th slide element from DOM
-					rawSlides.forEach(s => {
-						if (!slides.includes(s)) {
-							s.style.display = 'none';
-						}
-					});
-
-					// Setup initial slide z-indices and opacity
-					slides.forEach((slide, idx) => {
-						slide.style.position = 'absolute';
-						slide.style.top = '0';
-						slide.style.left = '0';
-						slide.style.width = '100%';
-						slide.style.height = '100%';
-						slide.style.transition = 'opacity 0.8s ease-in-out';
-						if (idx === 0) {
-							slide.style.opacity = '1';
-							slide.style.zIndex = '10';
-							slide.style.visibility = 'visible';
-						} else {
-							slide.style.opacity = '0';
-							slide.style.zIndex = '1';
-							slide.style.visibility = 'hidden';
-						}
-					});
-
-					function enforceBullets() {
-						const containers = Array.from(mod.querySelectorAll('.stockholm-pagination, sr7-bullets'));
-						if (containers.length > 1) {
-							for (let k = 1; k < containers.length; k++) {
-								containers[k].remove();
-							}
-						}
-
-						let bContainer = containers[0];
-						if (!bContainer) {
-							bContainer = document.createElement('div');
-							bContainer.className = 'stockholm-pagination';
-							mod.appendChild(bContainer);
-						} else {
-							bContainer.classList.add('stockholm-pagination');
-						}
-
-						let bullets = Array.from(bContainer.querySelectorAll('.sr7-bullet, sr7-bullet'));
-						if (bullets.length !== slides.length) {
-							bContainer.innerHTML = '';
-							bullets = [];
-							for (let i = 0; i < slides.length; i++) {
-								const b = document.createElement('div');
-								b.className = 'sr7-bullet';
-								b.setAttribute('data-index', i);
-								bContainer.appendChild(b);
-								bullets.push(b);
-							}
-						}
-
-						// Guarantee bContainer has strictly slides.length children
-						while (bContainer.children.length > slides.length) {
-							bContainer.lastElementChild.remove();
-						}
-
-						bullets.forEach((b, i) => {
-							if (i === currentIndex) {
-								b.classList.add('custom-bullet-active');
-								b.classList.add('selected');
-							} else {
-								b.classList.remove('custom-bullet-active');
-								b.classList.remove('selected');
-							}
-							b.onclick = function (e) {
-								e.preventDefault();
-								e.stopPropagation();
-								goToSlide(i);
-								resetTimer();
-							};
-						});
+					// Keep prevSlide underneath while crossfading nextSlide in
+					if (prevSlide) {
+						prevSlide.style.zIndex = '5';
 					}
+					nextSlide.style.visibility = 'visible';
+					nextSlide.style.zIndex = '10';
+					nextSlide.style.opacity = '1';
 
-					function goToSlide(targetIndex) {
-						if (targetIndex === currentIndex) return;
-						const prevIndex = currentIndex;
-						currentIndex = targetIndex;
-
-						const prevSlide = slides[prevIndex];
-						const nextSlide = slides[currentIndex];
-
-						// Keep prevSlide underneath while crossfading nextSlide in
-						if (prevSlide) {
-							prevSlide.style.zIndex = '5';
+					setTimeout(function () {
+						if (prevSlide && currentIndex !== prevIndex) {
+							prevSlide.style.opacity = '0';
+							prevSlide.style.zIndex = '1';
+							prevSlide.style.visibility = 'hidden';
 						}
-						nextSlide.style.visibility = 'visible';
-						nextSlide.style.zIndex = '10';
-						nextSlide.style.opacity = '1';
-
-						setTimeout(function () {
-							if (prevSlide && currentIndex !== prevIndex) {
-								prevSlide.style.opacity = '0';
-								prevSlide.style.zIndex = '1';
-								prevSlide.style.visibility = 'hidden';
-							}
-						}, 800);
-
-						enforceBullets();
-					}
-
-					function nextSlide() {
-						const nextIdx = (currentIndex + 1) % slides.length;
-						goToSlide(nextIdx);
-					}
-
-					function resetTimer() {
-						if (timer) clearInterval(timer);
-						timer = setInterval(nextSlide, 3500);
-					}
+					}, 800);
 
 					enforceBullets();
-					resetTimer();
-
-					const obs = new MutationObserver(function () {
-						enforceBullets();
-					});
-					obs.observe(mod, { childList: true, subtree: true });
 				}
-			})();
+
+				function nextSlide() {
+					const nextIdx = (currentIndex + 1) % slides.length;
+					goToSlide(nextIdx);
+				}
+
+				function resetTimer() {
+					if (timer) clearInterval(timer);
+					timer = setInterval(nextSlide, 3500);
+				}
+
+				enforceBullets();
+				resetTimer();
+
+				const obs = new MutationObserver(function () {
+					enforceBullets();
+				});
+				obs.observe(mod, { childList: true, subtree: true });
+			}
+		})();
 	</script>
 </body>
 
