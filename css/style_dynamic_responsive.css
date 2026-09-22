@@ -51,6 +51,24 @@
 		/* Header Responsive & Desktop Rules */
 		@media only screen and (min-width: 1001px) {
 
+			header.page_header .header_bottom,
+			header.transparent .header_bottom,
+			header.fixed .header_bottom {
+				position: relative !important;
+			}
+
+			.header_line_divider {
+				position: absolute !important;
+				top: 85px !important;
+				left: 142px !important;
+				right: 142px !important;
+				height: 1px !important;
+				background-color: #ffffff !important;
+				z-index: 999999 !important;
+				display: block !important;
+				pointer-events: none !important;
+			}
+
 			header .mobile_menu_button,
 			header nav.mobile_menu {
 				display: none !important;
@@ -105,6 +123,10 @@
 		}
 
 		@media only screen and (max-width: 1000px) {
+
+			.header_line_divider {
+				display: none !important;
+			}
 
 			.stockholm-pagination,
 			sr7-bullets,

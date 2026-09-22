@@ -147,20 +147,16 @@
 				left: 142px;
 			}
 
-			.header_bottom::before {
-				position: absolute;
-				height: 1px;
-				bottom: 0;
-				width: calc(100% - 284px);
-				left: 142px;
-				display: block;
-				top: auto;
-				border-bottom: 1px solid;
-				border-color: inherit;
-			}
-
-			header.fixed.scrolled .header_bottom::before {
-				display: none;
+			.header_line_divider {
+				position: absolute !important;
+				top: 85px !important;
+				left: 142px !important;
+				right: 142px !important;
+				height: 1px !important;
+				background-color: #ffffff !important;
+				z-index: 999999 !important;
+				display: block !important;
+				pointer-events: none !important;
 			}
 		}
 
@@ -770,6 +766,7 @@
 
 		/* Mobile pagination: hide pagination dots in responsive design */
 		@media (max-width: 1000px) {
+
 			.stockholm-pagination,
 			sr7-bullets,
 			.sr7-bullets,
@@ -801,6 +798,7 @@
 
 						<div class="header_bottom clearfix"
 							style="background-color:rgba(255, 255, 255, 0);;border-bottom: 1px solid #ffffff">
+							<div class="header_line_divider"></div>
 							<div class="header_inner_left">
 								<div class="mobile_menu_button"><span><i class="fa fa-bars"></i></span></div>
 								<div class="logo_wrapper">
@@ -3141,7 +3139,7 @@
 												<div class="elementor-element elementor-element-32aab4a elementor-widget elementor-widget-text-editor"
 													data-id="32aab4a" data-element_type="widget" data-e-type="widget"
 													data-widget_type="text-editor.default">
-													<strong>Pricol Experia Private Limited Â© 2026 | All rights
+													<strong>Pricol Experia Private Limited © 2026 | All rights
 														reserved.</strong>
 												</div>
 											</div>
