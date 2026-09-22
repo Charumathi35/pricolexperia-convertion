@@ -570,19 +570,33 @@
 
 		@media (max-width: 768px) {
 			.slide-bottom-left-caption {
-				bottom: 50px !important;
-				left: 30px !important;
+				bottom: 40px !important;
+				left: 50% !important;
+				transform: translateX(-50%) !important;
+				text-align: center !important;
+				width: 90% !important;
+				max-width: 400px !important;
+				display: flex !important;
+				flex-direction: column !important;
+				align-items: center !important;
+				justify-content: center !important;
 			}
 
 			.slide-bottom-left-caption .caption-logo-img {
 				height: 60px !important;
 				max-width: 180px !important;
+				margin: 0 auto !important;
 			}
 
 			.slide-bottom-left-caption .caption-logo-img.logo-dvara,
 			.slide-bottom-left-caption img[src*="Dvara_Logo"] {
 				height: 100px !important;
 				max-width: 240px !important;
+				margin: 0 auto !important;
+			}
+
+			.slide-bottom-left-caption .caption-line {
+				margin: 8px auto !important;
 			}
 		}
 
@@ -754,18 +768,22 @@
 			}
 		}
 
-		/* Mobile pagination layout matching live site */
-		@media (max-width: 768px) {
-			.stockholm-pagination {
-				bottom: 40px !important;
-				right: 30px !important;
-				gap: 18px !important;
-				top: auto !important;
-				left: auto !important;
-				display: flex !important;
-				flex-direction: row !important;
-				position: absolute !important;
-				z-index: 999 !important;
+		/* Mobile pagination: hide pagination dots in responsive design */
+		@media (max-width: 1000px) {
+			.stockholm-pagination,
+			sr7-bullets,
+			.sr7-bullets,
+			.tp-bullets,
+			.tp-bullet,
+			.rs-bullet,
+			.owl-dots,
+			.swiper-pagination,
+			.slick-dots,
+			.qode-slider-dots {
+				display: none !important;
+				visibility: hidden !important;
+				opacity: 0 !important;
+				pointer-events: none !important;
 			}
 		}
 	</style>
